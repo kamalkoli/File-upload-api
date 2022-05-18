@@ -8,3 +8,4 @@ urlpatterns = [
     path('uploadDetails/', MegazineDetailsView.as_view()),
     path('uploadPages/', MegazinePagesView.as_view()),
 ]
+#Updated
