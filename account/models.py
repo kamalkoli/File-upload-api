@@ -56,14 +56,14 @@ class MegazineDetails(models.Model):
     BuyPrice = models.IntegerField()
     IssueDate = models.DateField()
     Rating = models.IntegerField()
-    CategoryID = models.ForeignKey(MegazineCategories, on_delete=models.CASCADE)
+    Categories = models.ForeignKey(MegazineCategories, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.MegazineName
 
 
 class MegazinePages(models.Model):
-    MegazineID = models.ForeignKey(MegazineDetails, on_delete=models.CASCADE)
+    Megazines = models.ForeignKey(MegazineDetails, on_delete=models.CASCADE)
     MegazinePages = models.FileField(upload_to='Pages')
 
     def MegID(self):

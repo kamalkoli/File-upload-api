@@ -14,11 +14,11 @@ class MegazineCategoriesSerializer(serializers.ModelSerializer):
 class MegazineDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model=MegazineDetails
-        fields = ['MegazineID', 'MegazineCover','MegazineName','MegazineDiscription','RentPrice','BuyPrice','IssueDate', 'Rating', 'CategoryID']
+        fields = ['MegazineID', 'MegazineCover','MegazineName','MegazineDiscription','RentPrice','BuyPrice','IssueDate', 'Rating', 'Categories']
 
 
 
 class MegazinePagesSerializer(serializers.ModelSerializer):
     class Meta:
         model=MegazinePages
-        fields = ['MegazineID','MegazinePages']
+        fields = ['Megazines','MegazinePages']

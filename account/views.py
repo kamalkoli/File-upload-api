@@ -29,12 +29,12 @@ class MegazinePagesView(APIView):
         try:
             if check_serializer.is_valid:
                 files = request.FILES.getlist('MegazinePages')
-                MegId = request.data['MegazineID']
+                MegId = request.data['Megazines']
                 dic ={}
                 for value in files:
                     print(value, '======')
                     dic['MegazinePages'] = value
-                    dic['MegazineID'] = MegId
+                    dic['Megazines'] = MegId
                     print("Data : ", dic)
                     serializer = MegazinePagesSerializer(data=dic)
                     print(serializer)
@@ -51,7 +51,7 @@ class MegazinePagesView(APIView):
             
 
 
-#         return Response({'msg': 'Something Went Wrong.'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'msg': 'Something Went Wrong.'}, status=status.HTTP_400_BAD_REQUEST)
         
         
 
